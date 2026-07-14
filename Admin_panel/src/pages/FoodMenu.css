@@ -1,0 +1,101 @@
+.food-menu {
+  padding: 20px;
+}
+
+.menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.menu-header h2 {
+  color: #333;
+  font-size: 24px;
+}
+
+.add-item-btn {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.menu-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.category-section h3 {
+  color: #667eea;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.menu-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 15px;
+}
+
+.menu-item {
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s;
+}
+
+.menu-item:hover {
+  transform: translateX(5px);
+}
+
+.item-info h4 {
+  margin: 0 0 5px 0;
+  color: #333;
+}
+
+.item-price {
+  color: #28a745;
+  font-weight: bold;
+  margin: 0;
+}
+
+.item-status {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.availability {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.availability.available {
+  background: #d4edda;
+  color: #155724;
+}
+
+.availability.unavailable {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.toggle-btn {
+  padding: 4px 12px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+}

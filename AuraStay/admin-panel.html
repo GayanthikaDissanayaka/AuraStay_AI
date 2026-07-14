@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>AuraStay Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        h1 { color: #667eea; margin-bottom: 10px; }
+        button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover { background: #764ba2; }
+        .status { color: green; margin: 20px 0; font-weight: bold; }
+        .info { background: #f0f0f0; padding: 10px; border-radius: 8px; margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🏨 AuraStay Admin Panel</h1>
+        <p>Welcome to the admin dashboard</p>
+        <div class="status">✓ Server is running on port 53885</div>
+        <div class="status">✓ Admin panel loaded successfully</div>
+        <div class="info">
+            <strong>File Location:</strong><br>
+            D:\AuraStay\AuraStay\admin-panel.html
+        </div>
+        <button onclick="goBack()">← Back to App</button>
+    </div>
+    <script>
+        function goBack() {
+            if (window.ReactNativeWebView) {
+                window.ReactNativeWebView.postMessage('close');
+            } else {
+                window.close();
+                if (window.history.length > 1) {
+                    window.history.back();
+                } else {
+                    alert('Please close this tab manually');
+                }
+            }
+        }
+        console.log('Admin panel loaded from:', window.location.href);
+    </script>
+</body>
+</html>
